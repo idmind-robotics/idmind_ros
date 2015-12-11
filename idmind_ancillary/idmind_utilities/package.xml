@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+  <name>idmind_utilities</name>
+  <version>1.0.0</version>
+  <description>
+  This package contains some tools and utilities for debugging and calibrating the robots.
+  pose_initializer - Provides a service to publish a PoseWithCovarianceStamped to the topic /initialpose.
+  wheel_speed_calibration - Tool to calibrate the relationship between commanded and real wheel velocities.
+  </description>
+  <maintainer email="mcorberan@idmind.pt">Miguel Corberán Ruiz</maintainer>
+  <license>MIT License</license>
+  
+  <author email="mcorberan@idmind.pt">Miguel Corberán Ruiz</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>tf</build_depend>
+  
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>tf</run_depend>
+
+</package>

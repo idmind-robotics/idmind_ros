@@ -1,0 +1,34 @@
+<launch>
+
+<!-- "2wd" or "omni" -->
+<arg name="robot" value="omni" />
+
+<rosparam file="$(find no_build)/config/params/$(arg robot).yaml" command="load" />
+
+<node name="joystick" pkg="joy" type="joy_node" output="screen" >
+	<param name="autorepeat_rate" type="double" value="80.0" />
+	<param name="coalesce_interval" type="double" value="0.012" />
+</node>
+
+<node name="idmind_teleoperation" pkg="idmind_teleoperation" type="idmind_teleoperation" output="screen" />
+
+<node name="idmind_sensors" pkg="idmind_sensors" type="idmind_sensors" output="screen" />
+
+<node name="idmind_imu" pkg="idmind_imu" type="idmind_imu" output="screen" />
+<node name="idmind_motors" pkg="idmind_motors" type="idmind_motors" output="screen" />
+<node name="idmind_odometry" pkg="idmind_odometry" type="idmind_odometry" output="screen" />
+
+<node name="idmind_arms" pkg="idmind_arms" type="idmind_arms" output="screen" />
+<node name="mouth_encoder" pkg="idmind_interaction" type="mouth_encoder" output="screen" />
+<node name="idmind_interaction" pkg="idmind_interaction" type="idmind_interaction" output="screen" >
+	<param name="initialize" type="bool" value="false" />
+</node>
+
+<include file="$(find no_build)/launch/lasers.launch" />
+
+<node name="rear_obstacle_detector" pkg="idmind_obstacle_detection" type="laser_obstacle_detector" output="screen" >
+	<param name="scan_topic" type="string" value="scan2" />
+	<param name="status_topic" type="string" value="rear_status" />
+</node>
+
+</launch>

@@ -1,0 +1,12 @@
+---
+float64 electronics_battery
+float64 motors_battery
+float64 aux_1_voltage
+float64 aux_2_voltage
+float64 charger_voltage
+uint8 electronics_charging
+uint8 motors_charging
+uint8 aux_1_charging
+uint8 aux_2_charging
+uint8 power_button
+bool success

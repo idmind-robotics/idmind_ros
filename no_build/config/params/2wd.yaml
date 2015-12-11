@@ -1,0 +1,15 @@
+idmind_robot:
+  robot: "2wd"
+  kinematics: "differential"
+  wheels: 2
+  wheel_radius: 0.125
+  base_width: 0.385
+  max_acc_v: 0.5
+  max_acc_w: 2.0
+  acc_dec_factor: 5.0
+  max_v: 0.8
+  max_w: 2.0
+  velocity_offset: 500
+
+  ticks: 160815
+

@@ -1,0 +1,8 @@
+<launch>
+
+<param name="idmind_robot/kinematics" type="string" value="wheel_calibration_1" />
+
+<node name="idmind_motors" pkg="idmind_motors" type="idmind_motors" output="screen" />
+<node name="wheel_speed_calibration" pkg="idmind_utilities" type="wheel_speed_calibration" output="screen" />
+
+</launch>

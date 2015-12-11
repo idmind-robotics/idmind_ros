@@ -1,0 +1,5 @@
+SUBSYSTEMS=="usb",ATTRS{idProduct}=="6001",ATTRS{idVendor}=="0403",ATTRS{serial}=="FTGV9960",SYMLINK+="idmind-sensorsboard",GROUP="dialout"
+SUBSYSTEMS=="usb",ATTRS{idProduct}=="6001",ATTRS{idVendor}=="0403",ATTRS{serial}=="FTEMONTU",SYMLINK+="idmind-motorsboard",GROUP="dialout"
+
+SUBSYSTEMS=="usb",KERNEL=="ttyACM[0-9]*",ATTRS{manufacturer}=="Arduino LLC",SYMLINK+="idmind-imu",GROUP="dialout"
+SUBSYSTEMS=="usb",KERNEL=="ttyACM[0-9]*",ACTION=="add",ATTRS{idVendor}=="15d1",ATTRS{idProduct}=="0000",SYMLINK+="idmind-hokuyo",GROUP="dialout"

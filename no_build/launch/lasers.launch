@@ -1,0 +1,30 @@
+<launch>
+
+  <arg name="hokuyo_front" default="/dev/idmind-hokuyo_ttyACM1" />
+  <arg name="hokuyo_rear"  default="/dev/idmind-hokuyo_ttyACM0" />
+
+  <node name="laser1_node" pkg="hokuyo_node" type="hokuyo_node" output="screen" >
+    <param name="port" type="string" value="$(arg hokuyo_front)" />
+    <param name="frame_id" type="string" value="laser1"/>
+    <param name="skip" type="int" value="1" />
+    <remap from="scan" to="scan1"/>
+    <!-- <param name="min_ang"  value="-2.0" /> -->
+    <!-- <param name="max_ang"  value="2.0" /> -->
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser1" args="0.28 0 0 0 0 0 base_link laser1 100" />
+
+  <node name="laser2_node" pkg="hokuyo_node" type="hokuyo_node" output="screen" >
+    <param name="port" type="string" value="$(arg hokuyo_rear)" />
+    <param name="frame_id" type="string" value="laser2" />
+    <remap from="scan" to="scan2"/>    
+    <!-- <param name="min_ang"  value="-2.0" /> -->
+    <!-- <param name="max_ang"  value="2.0" /> -->
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser2" args="-0.23 0 0 3.1416 0 3.1416 base_link laser2 100" />
+
+<!-- 2wd -->
+<!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.21 0 0 0 0 0 base_link laser 100" /> -->
+
+</launch>

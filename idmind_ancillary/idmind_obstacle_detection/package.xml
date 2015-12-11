@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>idmind_obstacle_detection</name>
+  <version>1.0.0</version>
+  <description>
+  This package contains nodes for detecting obstacles.
+  The laser_obstacle_detector uses laser data to detect obstacles given an angle (which defines a centered arc) and a threshold.
+  When a reading below the threshold is detected inside the "cheese" portion a flag is rised.
+  </description>
+  <maintainer email="mcorberan@idmind.pt">Miguel Corberán Ruiz</maintainer>
+  <license>MIT License</license>
+
+  <author email="mcorberan@idmind.pt">Miguel Corberán Ruiz</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+
+</package>

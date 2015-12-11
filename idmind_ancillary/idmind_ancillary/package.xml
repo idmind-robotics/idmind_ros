@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>idmind_ancillary</name>
+  <version>1.0.0</version>
+  <description>
+  This package contains ancillary packages for the Idmind ROS software.
+  Besides helper nodes, there are some tools and utilities for debugging and calibrating the robots.
+  </description>
+  <maintainer email="mcorberan@idmind.pt">Miguel Corberán Ruiz</maintainer>
+  <license>MIT License</license>
+
+  <author email="mcorberan@idmind.pt">Miguel Corberán Ruiz</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <metapackage />
+  </export>
+
+</package>

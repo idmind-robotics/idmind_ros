@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>no_build</name>
+  <version>1.0.0</version>
+  <description>
+  This package homes different folders which do not need to be build.
+  config
+    behaviours -> Contains text files used for configuring different interactions.
+    costmap -> Configuration files for the navigation costmaps.
+    params -> Files with robot (hardware side) configuration parameters.
+    udev_rules -> Udev rules for the different electronics and interfaces.
+    
+  launch -> Necessary launch files to deploy the whole Idmind system.
+  maps -> Different maps used for localization and navigation.
+  scripts -> Scripts used for executing system, usually hardware related, actions.
+  </description>
+  <maintainer email="mcorberan@idmind.pt">Miguel Corberán Ruiz</maintainer>
+  <license>MIT License</license>
+  
+  <author email="mcorberan@idmind.pt">Miguel Corberán Ruiz</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

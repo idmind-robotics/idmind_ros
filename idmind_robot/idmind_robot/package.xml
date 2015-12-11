@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>idmind_robot</name>
+  <version>1.0.0</version>
+  <description>
+  This metapackage comprises a set of drivers for the Idmind robots.
+  The software is component based for various reasons, being the main
+  ones reusability, manageable size and easier maintenance.
+  </description>
+  <maintainer email="mcorberan@idmind.pt">Miguel Corberán Ruiz</maintainer>
+  <license>MIT License</license>
+  
+  <author email="mcorberan@idmind.pt">Miguel Corberán Ruiz</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <metapackage />
+  </export>
+
+</package>

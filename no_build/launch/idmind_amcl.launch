@@ -1,0 +1,21 @@
+<launch>
+
+<include file="$(find no_build)/launch/idmind_base.launch" />
+<include file="$(find no_build)/launch/idmind_map.launch" />
+
+<arg name="intopic1" value="scan1" />
+<arg name="intopic2" value="scan2" />
+<arg name="outtopic" value="scan" />
+
+<node name="relay1" pkg="topic_tools" type="relay" args="$(arg intopic1) $(arg outtopic)" output="screen" />
+<node name="relay2" pkg="topic_tools" type="relay" args="$(arg intopic2) $(arg outtopic)" output="screen" />
+
+<node pkg="amcl" type="amcl" name="amcl" output="screen" >
+	<!-- <remap from="scan" to="scan1"/> -->
+	<param name="initial_pose_x" type="double" value="16.0" />
+	<param name="initial_pose_y" type="double" value="11.35" />
+	<param name="initial_pose_a" type="double" value="-1.57" />
+	<param name="odom_model_type" type="string" value="omni" />
+</node>
+
+</launch>
